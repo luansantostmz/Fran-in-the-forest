@@ -1,0 +1,42 @@
+using System.Collections;
+using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEngine;
+
+public class GameControllerDeath : MonoBehaviour
+{
+	public bool isDie = false;
+
+	public GameObject screenDeath;
+	public GameObject leaderboardUIManager;
+
+	PlayFabManager playFabManager;
+	PointsManager pointsManager;	
+
+	private void OnEnable()
+	{
+		GameEvents.PauseToDie += ActionNormal;
+	}
+	private void OnDisable()
+	{		
+		GameEvents.PauseToDie -= ActionNormal;
+	}
+
+	private void Start()
+	{
+		playFabManager = FindObjectOfType<PlayFabManager>();
+		pointsManager = FindObjectOfType<PointsManager>();
+
+		screenDeath.SetActive(false);
+	}
+	public void ActionNormal()
+	{
+		isDie = false;
+		screenDeath.SetActive(true);
+		leaderboardUIManager.SetActive(true);
+
+
+		playFabManager.SendLeaderboardScore(pointsManager.points);
+		playFabManager.SendLeaderboardTaps(pointsManager.taps);		
+	}
+}

@@ -1,0 +1,218 @@
+fileFormatVersion: 2
+guid: 919731a437a50b24b90fe5d3f958c4df
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 512
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Mossy - TileSet_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 3072
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8e9e0ef3ec68da42936f4128f9e2d52
+      internalID: 1786483058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mossy - TileSet_15
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a4746996e72dd5469927963f1ce84e4
+      internalID: 1651510902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Mossy - TileSet_0: -1197753890
+      Mossy - TileSet_1: 1786483058
+      Mossy - TileSet_10: -2053883805
+      Mossy - TileSet_11: 569979191
+      Mossy - TileSet_12: 722760784
+      Mossy - TileSet_13: -1482252482
+      Mossy - TileSet_14: -182143822
+      Mossy - TileSet_15: 1651510902
+      Mossy - TileSet_16: 31093136
+      Mossy - TileSet_17: -911776018
+      Mossy - TileSet_18: 1160526547
+      Mossy - TileSet_19: 1816628095
+      Mossy - TileSet_2: 1265043918
+      Mossy - TileSet_20: -306249780
+      Mossy - TileSet_21: -318383573
+      Mossy - TileSet_22: -1506767466
+      Mossy - TileSet_23: 1980055006
+      Mossy - TileSet_24: -1734795766
+      Mossy - TileSet_25: -1941029262
+      Mossy - TileSet_26: -1736059484
+      Mossy - TileSet_27: -1878628478
+      Mossy - TileSet_28: -1500350176
+      Mossy - TileSet_29: 722289494
+      Mossy - TileSet_3: -425302230
+      Mossy - TileSet_30: 1403667417
+      Mossy - TileSet_31: -1135109736
+      Mossy - TileSet_32: -348606808
+      Mossy - TileSet_33: -1074698390
+      Mossy - TileSet_34: -1750935895
+      Mossy - TileSet_35: 1507019252
+      Mossy - TileSet_36: -272080210
+      Mossy - TileSet_37: 395524112
+      Mossy - TileSet_38: 501634671
+      Mossy - TileSet_39: -987599881
+      Mossy - TileSet_4: -994929286
+      Mossy - TileSet_40: -2000110350
+      Mossy - TileSet_41: -437008186
+      Mossy - TileSet_42: 2112379808
+      Mossy - TileSet_43: 1829236032
+      Mossy - TileSet_44: 1317500035
+      Mossy - TileSet_45: -524133700
+      Mossy - TileSet_46: -463881345
+      Mossy - TileSet_47: 487179354
+      Mossy - TileSet_48: -433902971
+      Mossy - TileSet_5: 1035249154
+      Mossy - TileSet_6: 1336603322
+      Mossy - TileSet_7: 1328034028
+      Mossy - TileSet_8: 632204570
+      Mossy - TileSet_9: -156583126
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
