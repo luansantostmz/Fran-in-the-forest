@@ -21,8 +21,8 @@ public class LeaderboardUIManager : MonoBehaviour
 		{
 			GameObject newPlayer = Instantiate(playerPrefab, playersParent);
 			TextMeshProUGUI[] texts = newPlayer.GetComponentsInChildren<TextMeshProUGUI>();
-			texts[0].text = item.Position.ToString();
-			texts[1].text = item.PlayFabId;
+			texts[0].text = (item.Position + 1).ToString();
+			texts[1].text = item.DisplayName;
 			texts[2].text = item.StatValue.ToString();
 
 			Debug.Log(string.Format("Place: {0} / ID:{1} / Score:{2}", item.Position, item.PlayFabId, item.StatValue));

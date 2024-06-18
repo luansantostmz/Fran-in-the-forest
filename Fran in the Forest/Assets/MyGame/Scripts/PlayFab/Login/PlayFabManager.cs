@@ -11,39 +11,17 @@ public class PlayFabManager : MonoBehaviour
 {
 
 	public static PlayFabManager Instance;
-
-
+	public GameObject nameWindow;
+	public InputField nameInput;
 	private void Awake()
 	{
 		Instance = this;
 	}
 	void Start()
     {
-        Login();
+		nameWindow.SetActive(false);
 	}
 
-	#region Login
-    void Login() 
-    {
-        var request = new LoginWithCustomIDRequest
-        {
-            CustomId = SystemInfo.deviceUniqueIdentifier,
-            CreateAccount = true
-        };
-        PlayFabClientAPI.LoginWithCustomID(request, OnSuccess, OnError);
-
-    }
-	private void OnSuccess(LoginResult result)
-	{
-        Debug.Log("Successfull login/account create!");
-	}
-
-	private void OnError(PlayFabError error)
-	{
-		Debug.Log("Error while in/creating account!");
-        Debug.Log(error.GenerateErrorReport());
-	}
-	#endregion
 	#region Send Leaderboard
 	public void SendLeaderboardScore(int score) 
     {
@@ -94,7 +72,7 @@ public class PlayFabManager : MonoBehaviour
 		var request = new GetLeaderboardRequest
 		{
 			StatisticName = "Score",
-			StartPosition = 1,
+			StartPosition = 0,
 			MaxResultsCount = 10
 		};
 		PlayFabClientAPI.GetLeaderboard(request, resultCallBack, OnErrorGetScoreTaps);
