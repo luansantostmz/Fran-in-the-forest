@@ -9,17 +9,11 @@ using TMPro;
 
 public class PlayFabManager : MonoBehaviour
 {
-
 	public static PlayFabManager Instance;
-	public GameObject nameWindow;
-	public InputField nameInput;
+
 	private void Awake()
 	{
 		Instance = this;
-	}
-	void Start()
-    {
-		nameWindow.SetActive(false);
 	}
 
 	#region Send Leaderboard

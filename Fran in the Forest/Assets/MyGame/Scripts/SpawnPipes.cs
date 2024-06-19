@@ -28,7 +28,7 @@ public class SpawnPipes : MonoBehaviour
 	}
 
 	private void Update()
-	{
+	{		
 		if (!GameControllerDeath.isDie) return;
 		//colocar algo para parar quando o personagem morrer
 		spawnPipes();

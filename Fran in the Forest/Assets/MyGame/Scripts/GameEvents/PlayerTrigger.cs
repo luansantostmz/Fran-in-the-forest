@@ -18,6 +18,11 @@ public class PlayerTrigger : MonoBehaviour
 		{			
 			GameEvents.AddPoints?.Invoke();
 		}
+		if (col.CompareTag("AddGold"))
+		{
+			GameEvents.AddGold?.Invoke();
+			Destroy(col.gameObject);
+		}
 	}
 	
 }

@@ -5,12 +5,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayFabManagerLogin : MonoBehaviour
 {
 	public static PlayFabManagerLogin Instance;
 	public GameObject nameWindow;
-	public InputField nameInput;
+	public TextMeshProUGUI nameInput;
+
 	private void Awake()
 	{
 		Instance = this;
@@ -46,7 +49,7 @@ public class PlayFabManagerLogin : MonoBehaviour
 		if (result.InfoResultPayload.PlayerProfile != null) name = result.InfoResultPayload.PlayerProfile.DisplayName;
 
 		if (name == null) nameWindow.SetActive(true);
-		else Debug.Log("Vai la brasill");
+		else SceneAsyncLoader.Instance.LoadNewScene("GamePlay");
 	}
 
 	private void OnError(PlayFabError error)
@@ -67,9 +70,7 @@ public class PlayFabManagerLogin : MonoBehaviour
 	private void OnDisplayNameUpdate(UpdateUserTitleDisplayNameResult result)
 	{
 		Debug.Log("Updated display name!");
+		SceneAsyncLoader.Instance.LoadNewScene("GamePlay");
 	}
-
-
-
-	#endregion
+	#endregion	
 }
