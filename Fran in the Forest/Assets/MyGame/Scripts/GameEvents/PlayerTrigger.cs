@@ -17,12 +17,7 @@ public class PlayerTrigger : MonoBehaviour
 		if (col.CompareTag("AddPoints"))
 		{			
 			GameEvents.AddPoints?.Invoke();
-		}
-		if (col.CompareTag("AddGold"))
-		{
-			GameEvents.AddGold?.Invoke();
-			Destroy(col.gameObject);
-		}
+		}		
 	}
 	
 }

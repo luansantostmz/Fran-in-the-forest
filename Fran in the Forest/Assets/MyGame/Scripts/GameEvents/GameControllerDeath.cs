@@ -35,7 +35,6 @@ public class GameControllerDeath : MonoBehaviour
 		screenDeath.SetActive(true);
 		leaderboardUIManager.SetActive(true);
 
-
 		playFabManager.SendLeaderboardScore(pointsManager.points);
 		playFabManager.SendLeaderboardTaps(pointsManager.taps);		
 	}

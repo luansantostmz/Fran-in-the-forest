@@ -20,6 +20,12 @@ public class PlayFabManagerLogin : MonoBehaviour
 	}
 	void Start()
 	{
+		if (Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.OSXPlayer || Application.platform == RuntimePlatform.LinuxPlayer)
+		{
+			Screen.SetResolution(1920, 1080, false);
+		}
+
+
 		nameWindow.SetActive(false);
 		Login();
 	}

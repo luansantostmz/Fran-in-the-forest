@@ -15,22 +15,20 @@ public class SpawnPipes : MonoBehaviour
 	[SerializeField] private float timeToIncreaseSpeed;
 	[SerializeField] private float maxTimeIncreaseSpeed;
 	                 public float increaseSpeed;
-	[SerializeField] private float timerIncreaseSpeed;
-
-
+	[SerializeField] private float timerIncreaseSpeed;	
 
 	public GameControllerDeath GameControllerDeath;
 	private void Start()
 	{
 		GameControllerDeath = FindObjectOfType<GameControllerDeath>();
-		GameObject newPipe = Instantiate(pipe);
-		newPipe.transform.position = transform.position + new Vector3(0, Random.Range(-height, height), 0);
+		//GameObject newPipe = Instantiate(pipe);
+		//newPipe.transform.position = transform.position + new Vector3(0, Random.Range(-height, height), 0);
 	}
 
 	private void Update()
 	{		
 		if (!GameControllerDeath.isDie) return;
-		//colocar algo para parar quando o personagem morrer
+
 		spawnPipes();
 		IncreaseSpeedPipe();
 		ControlSpawnSpeed();
@@ -48,6 +46,7 @@ public class SpawnPipes : MonoBehaviour
 
 		timer += Time.deltaTime;
 	}
+	
 	void IncreaseSpeedPipe() 
 	{
 		if (timerIncreaseSpeed > maxTimeIncreaseSpeed)

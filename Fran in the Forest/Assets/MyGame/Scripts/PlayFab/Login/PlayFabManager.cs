@@ -6,6 +6,7 @@ using PlayFab.ClientModels;
 using System;
 using UnityEngine.UI;
 using TMPro;
+using System.Threading.Tasks;
 
 public class PlayFabManager : MonoBehaviour
 {
@@ -13,7 +14,13 @@ public class PlayFabManager : MonoBehaviour
 
 	private void Awake()
 	{
+		if (Instance != null && Instance != this) 
+		{
+			Destroy(gameObject);
+			return;
+		}
 		Instance = this;
+		DontDestroyOnLoad(gameObject);
 	}
 
 	#region Send Leaderboard
@@ -61,15 +68,26 @@ public class PlayFabManager : MonoBehaviour
 	}
 	#endregion
 	#region Get Leaderboard
-	public  void GetLeaderboardScore(Action<GetLeaderboardResult> resultCallBack) 
+	public async Task<GetLeaderboardResult> GetLeaderboardScore() 
 	{
+		var tcs = new TaskCompletionSource<GetLeaderboardResult>();
 		var request = new GetLeaderboardRequest
 		{
 			StatisticName = "Score",
 			StartPosition = 0,
 			MaxResultsCount = 10
 		};
-		PlayFabClientAPI.GetLeaderboard(request, resultCallBack, OnErrorGetScoreTaps);
+
+		PlayFabClientAPI.GetLeaderboard(request, 
+			result =>
+			{
+				tcs.SetResult(result);
+			}, 
+			OnErrorGetScoreTaps);
+
+		await tcs.Task;
+
+		return tcs.Task.Result;
 	}	
 
 	private void OnErrorGetScoreTaps(PlayFabError error)
