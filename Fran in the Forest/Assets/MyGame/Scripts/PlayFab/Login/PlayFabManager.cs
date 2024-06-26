@@ -20,7 +20,6 @@ public class PlayFabManager : MonoBehaviour
 			return;
 		}
 		Instance = this;
-		DontDestroyOnLoad(gameObject);
 	}
 
 	#region Send Leaderboard

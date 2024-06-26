@@ -8,7 +8,6 @@ public class GameControllerDeath : MonoBehaviour
 	public bool isDie = false;
 
 	public GameObject screenDeath;
-	public GameObject leaderboardUIManager;
 
 	PlayFabManager playFabManager;
 	PointsManager pointsManager;	
@@ -33,9 +32,7 @@ public class GameControllerDeath : MonoBehaviour
 	{
 		isDie = false;
 		screenDeath.SetActive(true);
-		leaderboardUIManager.SetActive(true);
 
 		playFabManager.SendLeaderboardScore(pointsManager.points);
-		playFabManager.SendLeaderboardTaps(pointsManager.taps);		
 	}
 }

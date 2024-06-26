@@ -23,11 +23,6 @@ public class PlayerMove : MonoBehaviour
 		if (!gameControllerDeath.isDie) return;
 
 		Debug.Log("Pulou");
-		rb.velocity = Vector2.up * jumpForce;
-
-		if (value.phase == InputActionPhase.Started)
-		{
-			pointsManager.taps++;
-		}
+		rb.velocity = Vector2.up * jumpForce;		
 	}
 }

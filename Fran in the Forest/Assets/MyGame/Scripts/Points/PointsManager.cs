@@ -5,11 +5,8 @@ using UnityEngine;
 
 public class PointsManager : MonoBehaviour
 {
-					public int points;
+					 public int points;
 	[SerializeField] private TextMeshProUGUI textPoints;
-
-					 public int taps;
-	[SerializeField] private TextMeshProUGUI textTaps;
 
 	private void OnEnable()
 	{
@@ -23,10 +20,6 @@ public class PointsManager : MonoBehaviour
 	private void Start()
 	{
 		textPoints.text = points.ToString();
-	}
-	private void Update()
-	{
-		textTaps.text = taps.ToString();
 	}
 
 	void AddPoints() 
